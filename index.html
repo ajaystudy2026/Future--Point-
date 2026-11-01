@@ -14,7 +14,7 @@
     <div class="max-w-md mx-auto flex items-center justify-between">
       <div class="flex items-center gap-2.5">
         <!-- Coaching Logo -->
-        <img src="logo.png" alt="Logo" class="w-10 h-10 rounded-full border-2 border-amber-400 bg-white object-contain shadow-sm" onerror="this.src='https://placehold.co/80x80?text=FP'">
+        <img src="Screenshot_20261101-190647_WhatsApp.jpg" alt="Logo" class="w-10 h-10 rounded-full border-2 border-amber-400 bg-white object-contain shadow-sm">
         <div>
           <h1 class="text-sm font-extrabold leading-tight tracking-wide text-white">FUTURE POINT</h1>
           <p class="text-[10px] text-amber-300 font-medium">Competitive Classes • Sheikhpura</p>
@@ -34,7 +34,7 @@
 
       <!-- ================= COACHING BANNER ================= -->
       <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
-        <img src="banner.jpg" alt="Coaching Banner" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/600x300?text=Future+Point+Competitive+Classes'">
+        <img src="IMG-20251116-WA0000.jpg" alt="Coaching Banner" class="w-full h-auto object-cover">
         <div class="p-3 bg-gradient-to-r from-indigo-900 to-indigo-800 text-white flex justify-between items-center text-xs">
           <div>
             <p class="font-bold text-amber-300">MISSION SUCCESS</p>
@@ -93,7 +93,7 @@
 
       <!-- ================= FOUNDER CARD ================= -->
       <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center gap-3.5">
-        <img src="sir.jpg" alt="Kanchan Sir" class="w-14 h-14 rounded-full object-cover border-2 border-indigo-600 shadow-md shrink-0" onerror="this.src='https://placehold.co/100x100?text=Sir'">
+        <img src="Screenshot_20261101-192310_Gallery.jpg" alt="Kanchan Sir" class="w-14 h-14 rounded-full object-cover border-2 border-indigo-600 shadow-md shrink-0">
         <div>
           <span class="inline-block px-2 py-0.5 rounded bg-indigo-50 text-indigo-700 font-bold text-[9px] mb-0.5 uppercase">संस्थापक व मार्गदर्शक</span>
           <h3 class="font-bold text-sm text-slate-900">कंचन सर (Kanchan Sir)</h3>
@@ -297,8 +297,11 @@
 
     function openSection(type) {
       document.getElementById('view-home').classList.add('hidden');
-      if (type === 'notes' || type === 'handwritten') {
-        document.getElementById('notes-title').innerText = type === 'notes' ? "Class Notes" : "Handwritten Sheets";
+      if (type === 'notes') {
+        document.getElementById('notes-title').innerText = "Class Notes (प्रिंटेड)";
+        document.getElementById('view-notes').classList.remove('hidden');
+      } else if (type === 'handwritten') {
+        document.getElementById('notes-title').innerText = "Handwritten Sheets";
         document.getElementById('view-notes').classList.remove('hidden');
       } else if (type === 'mock') {
         document.getElementById('view-mock').classList.remove('hidden');
