@@ -9,93 +9,158 @@
 </head>
 <body class="bg-slate-100 text-slate-800 min-h-screen pb-16 font-sans">
 
-  <!-- Header -->
-  <header class="bg-indigo-700 text-white p-4 sticky top-0 z-30 shadow-md">
+  <!-- ================= TOP HEADER WITH OFFICIAL LOGO ================= -->
+  <header class="bg-indigo-900 text-white p-3 sticky top-0 z-30 shadow-md">
     <div class="max-w-md mx-auto flex items-center justify-between">
-      <div>
-        <h1 class="text-base font-bold leading-tight">Future Point Competitive Classes</h1>
-        <p class="text-xs text-indigo-200 mt-0.5">Sheikhpura | Study Materials & Mock Tests</p>
+      <div class="flex items-center gap-2.5">
+        <!-- Coaching Logo -->
+        <img src="logo.png" alt="Logo" class="w-10 h-10 rounded-full border-2 border-amber-400 bg-white object-contain shadow-sm" onerror="this.src='https://placehold.co/80x80?text=FP'">
+        <div>
+          <h1 class="text-sm font-extrabold leading-tight tracking-wide text-white">FUTURE POINT</h1>
+          <p class="text-[10px] text-amber-300 font-medium">Competitive Classes • Sheikhpura</p>
+        </div>
       </div>
-      <span class="text-xs bg-indigo-800 px-2.5 py-1 rounded-full border border-indigo-500 whitespace-nowrap ml-2">Student Portal</span>
+      <span class="text-[10px] bg-amber-400 text-slate-900 px-2.5 py-1 rounded-full font-bold uppercase tracking-wider">
+        Portal
+      </span>
     </div>
   </header>
 
-  <!-- Main Container -->
+  <!-- ================= MAIN CONTAINER ================= -->
   <main class="max-w-md mx-auto p-4 space-y-4">
 
     <!-- HOME VIEW -->
     <div id="view-home" class="space-y-4">
-      <!-- Notice Banner -->
-      <div class="bg-amber-50 border-l-4 border-amber-500 p-3 rounded-lg shadow-sm text-sm">
+
+      <!-- ================= COACHING BANNER ================= -->
+      <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+        <img src="banner.jpg" alt="Coaching Banner" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/600x300?text=Future+Point+Competitive+Classes'">
+        <div class="p-3 bg-gradient-to-r from-indigo-900 to-indigo-800 text-white flex justify-between items-center text-xs">
+          <div>
+            <p class="font-bold text-amber-300">MISSION SUCCESS</p>
+            <p class="text-[10px] text-slate-200">Hard Work + Right Guidance = Selection</p>
+          </div>
+          <a href="tel:9304750875" class="bg-amber-400 text-slate-900 font-extrabold px-3 py-1.5 rounded-lg active:scale-95 transition text-[11px] flex items-center gap-1 shadow">
+            <i class="fa-solid fa-phone"></i> कॉल करें
+          </a>
+        </div>
+      </div>
+
+      <!-- ================= NOTICE BAR ================= -->
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-3 rounded-lg shadow-sm text-xs">
         <p class="font-bold text-amber-800 flex items-center gap-1.5">
-          <i class="fa-solid fa-bullhorn text-xs"></i> सूचना / Notice:
+          <i class="fa-solid fa-bullhorn text-xs"></i> आवश्यक सूचना / Notice:
         </p>
-        <p class="text-amber-700 text-xs mt-1 leading-relaxed">
-          साप्ताहिक रेलवे, SSC व बिहार पुलिस मॉक टेस्ट और क्लास नोट्स यहाँ अपडेट किए जा रहे हैं।
+        <p class="text-amber-700 mt-1 leading-relaxed">
+          साप्ताहिक रेलवे, SSC, बिहार पुलिस व दरोगा स्पेशल क्लास नोट्स व ऑनलाइन टेस्ट यहाँ उपलब्ध कराए जा रहे हैं।
         </p>
       </div>
 
-      <!-- Main Action Grid -->
+      <!-- ================= MAIN ACTION CARDS ================= -->
       <div class="grid grid-cols-2 gap-3">
-        <!-- Card 1: Notes -->
         <button onclick="openSection('notes')" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm text-center hover:bg-slate-50 active:scale-95 transition">
-          <div class="text-3xl mb-1.5">📚</div>
+          <div class="w-10 h-10 mx-auto rounded-full bg-blue-50 text-blue-600 flex items-center justify-center text-xl mb-1.5 shadow-inner">
+            <i class="fa-solid fa-book-open"></i>
+          </div>
           <h3 class="font-bold text-sm text-slate-800">Class Notes</h3>
           <p class="text-[11px] text-slate-500 mt-0.5">प्रिंटेड व थ्योरी PDF</p>
         </button>
 
-        <!-- Card 2: Handwritten -->
         <button onclick="openSection('handwritten')" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm text-center hover:bg-slate-50 active:scale-95 transition">
-          <div class="text-3xl mb-1.5">✍️</div>
+          <div class="w-10 h-10 mx-auto rounded-full bg-amber-50 text-amber-600 flex items-center justify-center text-xl mb-1.5 shadow-inner">
+            <i class="fa-solid fa-pen-nib"></i>
+          </div>
           <h3 class="font-bold text-sm text-slate-800">Handwritten</h3>
           <p class="text-[11px] text-slate-500 mt-0.5">क्लास हैंडराइटिंग शीट्स</p>
         </button>
 
-        <!-- Card 3: Quiz -->
         <button onclick="startQuiz()" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm text-center hover:bg-slate-50 active:scale-95 transition">
-          <div class="text-3xl mb-1.5">⏱️</div>
+          <div class="w-10 h-10 mx-auto rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl mb-1.5 shadow-inner">
+            <i class="fa-solid fa-stopwatch-20"></i>
+          </div>
           <h3 class="font-bold text-sm text-slate-800">Daily Quiz</h3>
           <p class="text-[11px] text-slate-500 mt-0.5">लाइव टेस्ट (5 प्रश्न)</p>
         </button>
 
-        <!-- Card 4: Mock Test -->
         <button onclick="openSection('mock')" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm text-center hover:bg-slate-50 active:scale-95 transition">
-          <div class="text-3xl mb-1.5">🏆</div>
+          <div class="w-10 h-10 mx-auto rounded-full bg-purple-50 text-purple-600 flex items-center justify-center text-xl mb-1.5 shadow-inner">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
           <h3 class="font-bold text-sm text-slate-800">Mock Test</h3>
-          <p class="text-[11px] text-slate-500 mt-0.5">फुल टेस्ट (CBT पैटर्न)</p>
+          <p class="text-[11px] text-slate-500 mt-0.5">फुल टेस्ट (CBT मोड)</p>
         </button>
       </div>
 
-      <!-- Recent Updates -->
+      <!-- ================= FOUNDER CARD ================= -->
+      <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center gap-3.5">
+        <img src="sir.jpg" alt="Kanchan Sir" class="w-14 h-14 rounded-full object-cover border-2 border-indigo-600 shadow-md shrink-0" onerror="this.src='https://placehold.co/100x100?text=Sir'">
+        <div>
+          <span class="inline-block px-2 py-0.5 rounded bg-indigo-50 text-indigo-700 font-bold text-[9px] mb-0.5 uppercase">संस्थापक व मार्गदर्शक</span>
+          <h3 class="font-bold text-sm text-slate-900">कंचन सर (Kanchan Sir)</h3>
+          <p class="text-[10px] text-emerald-600 font-semibold mt-0.5">QUALIFIED: IBPS (PO+CLERK), SBI, BSSC</p>
+          <p class="text-[11px] text-slate-500 mt-0.5 leading-snug">
+            Math, Reasoning & G.K | शेखपुरा में भरोसेमंद मार्गदर्शन
+          </p>
+        </div>
+      </div>
+
+      <!-- ================= RECENT UPLOADS ================= -->
       <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
-        <h2 class="font-bold text-sm mb-3 text-slate-700 flex items-center justify-between">
-          <span>हालिया अपलोड्स (Latest Files)</span>
-          <span class="text-[10px] bg-indigo-50 text-indigo-600 px-2 py-0.5 rounded">नया</span>
+        <h2 class="font-bold text-xs mb-3 text-slate-700 flex items-center justify-between">
+          <span class="flex items-center gap-1.5">
+            <i class="fa-solid fa-folder-open text-indigo-600"></i> हालिया अपलोड्स (Latest Files)
+          </span>
+          <span class="text-[10px] bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded font-semibold">Live</span>
         </h2>
         <ul class="space-y-2 text-xs">
           <li class="flex justify-between items-center p-2.5 bg-slate-50 rounded-lg border border-slate-100">
             <div>
-              <p class="font-semibold text-slate-800">Math: Percentage & Ratio Practice Set</p>
-              <p class="text-[10px] text-slate-400 mt-0.5">PDF • 25 Questions with Solution</p>
+              <p class="font-bold text-slate-800">Modern History: यूरोपीयों का आगमन</p>
+              <p class="text-[10px] text-slate-400 mt-0.5">PDF • GS Special Handwritten</p>
             </div>
-            <button onclick="viewSamplePdf('Math: Percentage & Ratio Set')" class="text-indigo-600 font-bold bg-indigo-50 px-3 py-1.5 rounded hover:bg-indigo-100 active:scale-95">
-              View
-            </button>
+            <a href="https://drive.google.com/file/d/1NwxKiHCnNA0r3G4C2L2H6qPrXdTZUqzt/view?usp=drivesdk" target="_blank" class="text-indigo-600 font-bold bg-indigo-50 px-3 py-1.5 rounded hover:bg-indigo-100 active:scale-95 transition">
+              Download
+            </a>
           </li>
           <li class="flex justify-between items-center p-2.5 bg-slate-50 rounded-lg border border-slate-100">
             <div>
-              <p class="font-semibold text-slate-800">Reasoning: Coding-Decoding Sheet</p>
-              <p class="text-[10px] text-slate-400 mt-0.5">PDF • Type-wise Short Tricks</p>
+              <p class="font-bold text-slate-800">Math: Percentage & Ratio Sheet</p>
+              <p class="text-[10px] text-slate-400 mt-0.5">PDF • Basic to High Level</p>
             </div>
-            <button onclick="viewSamplePdf('Reasoning: Coding-Decoding Sheet')" class="text-indigo-600 font-bold bg-indigo-50 px-3 py-1.5 rounded hover:bg-indigo-100 active:scale-95">
+            <button onclick="alert('यह क्लासरूम सेट जल्द उपलब्ध होगा!')" class="text-indigo-600 font-bold bg-indigo-50 px-3 py-1.5 rounded hover:bg-indigo-100 active:scale-95 transition">
               View
             </button>
           </li>
         </ul>
       </div>
+
+      <!-- ================= FOOTER / EXACT COACHING ADDRESS & CONTACT ================= -->
+      <footer class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-3">
+        <div class="text-center space-y-1">
+          <h4 class="text-xs font-extrabold text-slate-900 tracking-wide uppercase">FUTURE POINT COMPETITIVE CLASS</h4>
+          <p class="text-[11px] text-slate-600 leading-relaxed px-2">
+            <i class="fa-solid fa-location-dot text-red-500 mr-1"></i>
+            कृष्णा लस्सी वाली गली में, काली मंदिर के पास, बंगालीपर, शेखपुरा, पिन: 811105 (बिहार)
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2 pt-1">
+          <a href="tel:9304750875" class="bg-indigo-600 text-white py-2 rounded-lg text-xs font-bold flex items-center justify-center gap-1.5 active:scale-95 shadow-sm">
+            <i class="fa-solid fa-phone"></i> 9304750875
+          </a>
+          <a href="https://wa.me/919939069647?text=नमस्ते%20सर,%20मुझे%20फ्यूचर%20पॉइंट%20क्लासेज%20के%20बारे%20में%20जानकारी%20चाहिए।" target="_blank" class="bg-emerald-600 text-white py-2 rounded-lg text-xs font-bold flex items-center justify-center gap-1.5 active:scale-95 shadow-sm">
+            <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
+          </a>
+        </div>
+
+        <div class="pt-2 border-t border-slate-100 text-center">
+          <span class="text-[10px] text-slate-400">© 2026 Future Point Competitive Classes. All Rights Reserved.</span>
+        </div>
+      </footer>
+
     </div>
 
-    <!-- NOTES / HANDWRITTEN SECTION VIEW -->
+    <!-- NOTES VIEW -->
     <div id="view-notes" class="hidden space-y-4">
       <div class="flex items-center justify-between bg-white p-3 rounded-lg border border-slate-200 shadow-sm">
         <button onclick="goHome()" class="text-indigo-600 font-semibold text-xs flex items-center gap-1 active:scale-95">
@@ -105,20 +170,6 @@
       </div>
 
       <div class="space-y-2.5 text-xs">
-        <!-- Item 1 -->
-        <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-          <div>
-            <span class="inline-block px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-semibold text-[10px] mb-1">Mathematics</span>
-            <h4 class="font-bold text-slate-800 text-sm">2D & 3D Mensuration Formula Sheet</h4>
-            <p class="text-slate-500 text-[11px] mt-0.5">क्षेत्रमिति के सभी सूत्र एवं बेसिक ट्रिक्स</p>
-          </div>
-          <button onclick="viewSamplePdf('2D & 3D Mensuration Formula Sheet')" class="bg-indigo-600 text-white font-semibold px-3 py-1.5 rounded-lg active:scale-95">
-            Download
-          </button>
-        </div>
-
-        <!-- Item 2 -->
-                <!-- Item 2 (Modern History) -->
         <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
           <div>
             <span class="inline-block px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-semibold text-[10px] mb-1">Modern History</span>
@@ -128,19 +179,6 @@
           <a href="https://drive.google.com/file/d/1NwxKiHCnNA0r3G4C2L2H6qPrXdTZUqzt/view?usp=drivesdk" target="_blank" class="bg-indigo-600 text-white font-semibold px-3 py-1.5 rounded-lg active:scale-95 text-center">
             Download
           </a>
-        </div>
-
-
-        <!-- Item 3 -->
-        <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
-          <div>
-            <span class="inline-block px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold text-[10px] mb-1">General Studies</span>
-            <h4 class="font-bold text-slate-800 text-sm">Indian Constitution: Important Articles</h4>
-            <p class="text-slate-500 text-[11px] mt-0.5">संविधान के प्रमुख अनुच्छेद एवं अनुसूचियां</p>
-          </div>
-          <button onclick="viewSamplePdf('Indian Constitution: Important Articles')" class="bg-indigo-600 text-white font-semibold px-3 py-1.5 rounded-lg active:scale-95">
-            Download
-          </button>
         </div>
       </div>
     </div>
@@ -156,7 +194,6 @@
         </span>
       </div>
 
-      <!-- Quiz Card -->
       <div id="quiz-box" class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-4">
         <div class="flex justify-between items-center text-xs text-slate-500 border-b pb-2">
           <span id="quiz-progress" class="font-semibold text-slate-700">प्रश्न 1 / 5</span>
@@ -167,16 +204,13 @@
           प्रश्न लोड हो रहा है...
         </p>
 
-        <div id="quiz-options" class="space-y-2 text-xs">
-          <!-- Options will render dynamically -->
-        </div>
+        <div id="quiz-options" class="space-y-2 text-xs"></div>
 
         <button id="btn-next-q" onclick="nextQuestion()" class="w-full bg-indigo-600 text-white py-2.5 rounded-lg font-bold text-xs mt-2 disabled:bg-slate-300 disabled:cursor-not-allowed transition">
           अगला प्रश्न
         </button>
       </div>
 
-      <!-- Quiz Result (Hidden Initially) -->
       <div id="quiz-result" class="hidden bg-white p-6 rounded-xl border border-slate-200 shadow-sm text-center space-y-4">
         <div class="text-4xl">🎉</div>
         <h3 class="text-base font-bold text-slate-800">क्विज़ समाप्त!</h3>
@@ -201,7 +235,6 @@
       </div>
 
       <div class="space-y-3">
-        <!-- Mock 1 -->
         <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-2.5">
           <div class="flex justify-between items-start">
             <div>
@@ -215,29 +248,12 @@
             Start Test (CBT Mode)
           </button>
         </div>
-
-        <!-- Mock 2 -->
-        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-2.5">
-          <div class="flex justify-between items-start">
-            <div>
-              <span class="inline-block px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-semibold text-[10px]">Upcoming</span>
-              <h4 class="font-bold text-sm text-slate-800 mt-1">SSC CHSL / GD Practice Mock 02</h4>
-            </div>
-            <span class="text-[11px] font-bold text-slate-600 bg-slate-100 px-2 py-1 rounded">80 प्रश्न</span>
-          </div>
-          <p class="text-xs text-slate-500">अवधि: 60 मिनट • प्रत्येक रविवार 10:00 AM</p>
-          <button onclick="alert('यह टेस्ट रविवार सुबह 10:00 बजे लाइव होगा!')" class="w-full bg-slate-100 text-slate-700 py-2 rounded-lg text-xs font-bold border border-slate-300">
-            Set Reminder
-          </button>
-        </div>
       </div>
     </div>
 
   </main>
 
-  <!-- JavaScript Logics -->
   <script>
-    // Demo Quiz Data
     const questions = [
       {
         q: "1. यदि किसी वृत्त की त्रिज्या में 50% की वृद्धि की जाए, तो उसके क्षेत्रफल में कितने प्रतिशत की वृद्धि होगी?",
@@ -281,11 +297,8 @@
 
     function openSection(type) {
       document.getElementById('view-home').classList.add('hidden');
-      if (type === 'notes') {
-        document.getElementById('notes-title').innerText = "Class Notes (प्रिंटेड)";
-        document.getElementById('view-notes').classList.remove('hidden');
-      } else if (type === 'handwritten') {
-        document.getElementById('notes-title').innerText = "Handwritten Sheets";
+      if (type === 'notes' || type === 'handwritten') {
+        document.getElementById('notes-title').innerText = type === 'notes' ? "Class Notes" : "Handwritten Sheets";
         document.getElementById('view-notes').classList.remove('hidden');
       } else if (type === 'mock') {
         document.getElementById('view-mock').classList.remove('hidden');
@@ -303,7 +316,7 @@
       currentQ = 0;
       score = 0;
       loadQuestion();
-      startTimer(300); // 5 minutes
+      startTimer(300);
     }
 
     function startTimer(duration) {
@@ -373,10 +386,6 @@
       document.getElementById('quiz-box').classList.add('hidden');
       document.getElementById('quiz-result').classList.remove('hidden');
       document.getElementById('final-score').innerText = `${score} / ${questions.length}`;
-    }
-
-    function viewSamplePdf(title) {
-      alert(`[डेमो फ़ाइल]: "${title}" खुल रही है। यहाँ बाद में आपकी कोचिंग की Google Drive PDF खुलेगी।`);
     }
   </script>
 </body>
